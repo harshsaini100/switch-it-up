@@ -1,19 +1,33 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-
-.theme2 body{
-  @apply bg-gray-900 text-white
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.theme3 body{
-  @apply bg-blue-400 text-white
+*{
+  @apply transition-all duration-500
+}
+
+.logo-side{
+  font-family: "Pacifico", cursive !important; 
+  @apply font-extrabold m-3 p-2 text-xl;
+}
+.logo{
+  font-family: "Pacifico", cursive !important;  
 }
 
 body {
   @apply transition-all duration-500;
 }
 
+select option{
+  @apply text-black cursor-pointer
+}
+
+/* For when theme changes. To Show the animation */
 
 @keyframes fadeInOut {
   0% {
@@ -37,3 +51,126 @@ body {
 .animate-fade-in-out {
   animation: fadeInOut 1s ease-in-out;
 }
+
+.logo{
+  @apply font-extrabold text-lg p-2.5 rounded-t-2xl rounded-tr-2xl
+}
+
+aside{
+  @apply bg-gray-800 h-screen fixed top-0 p-3;
+  width: 250px;
+  left: -250px;
+  /* transition: all 0.5s ease-in-out; */
+}
+
+.content{
+  @apply mr-4 ml-4;
+  @apply flex flex-col;
+}
+
+
+
+.card{
+  max-height: 300px;
+  min-height: 300px;
+  max-width: 250px;
+}
+
+.close aside{
+  left: -250px !important;
+}
+
+.close .box{
+  right: -50px !important;
+}
+
+.img-container{
+  height: 70%;
+  min-height: 65%;
+  width: 100%;
+  @apply bg-white
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  /* position: relative; */
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid black; /* triangle points LEFT */
+}
+
+.point-right .triangle {
+  border-left: none;
+  border-right: 15px solid black; /* triangle points RIGHT */
+}
+
+@media (max-width: 465px) {
+  * {
+    @apply text-sm
+  }
+}
+.categories .card{
+  min-width: 200px;
+}
+/*------------- Theme 2 -------------*/
+
+.theme2 body{
+  @apply bg-gray-900 text-white;
+  font-weight: bold;
+}
+.theme2 aside{
+  @apply left-0; 
+}
+
+@media (min-width: 720px) {
+  /* .theme2 aside{
+    @apply top-1/2;
+    transform: translateY(-50%);
+  } */
+  .theme2 .open .content{
+    margin-left: 265px;
+  }
+  
+  .theme2 .open header{
+    margin-left: 265px;
+  }
+}
+
+
+
+
+.theme2 header{
+  @apply shadow-white shadow-sm
+}
+
+.theme2 header .logo, .theme2 header nav ul li{
+  @apply opacity-0 transition-all duration-500
+}
+
+.theme2 .close  header .logo{
+ @apply opacity-100
+}
+
+/*------------- Theme 3 -------------*/
+.theme3 .card {
+  @apply border-2 border-white;
+  @apply bg-blue-400 text-black;
+}
+
+.theme3 body{
+  @apply bg-blue-400 text-white;
+   font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
