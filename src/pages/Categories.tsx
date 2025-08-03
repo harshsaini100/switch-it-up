@@ -55,7 +55,7 @@ export default function Category(){
                     <Link key={i} to={`/category/${category}`}>
                         <div 
                         key={i}
-                         className={`${theme == "theme3" ? 'card hover:scale-125 hover:bg-indigo-600' : 'hover:bg-amber-100 hover:text-black'} capitalize underline shadow-gray-600 shadow-md rounded-lg p-2.5 flex justify-center items-center text-center flex-col`}
+                         className={`${theme == "theme3" ? 'card hover:scale-125 hover:bg-indigo-600' : 'hover:bg-amber-100 min-w-2xs hover:text-black'} capitalize underline shadow-gray-600 shadow-md rounded-lg p-2.5 flex justify-center items-center text-center flex-col`}
                         >
                             {category}
                         </div>

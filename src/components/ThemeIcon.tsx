@@ -14,7 +14,7 @@ export default function ThemeIcon() {
   if (!recentlyChangedTheme) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+    <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none theme-icon">
       <div className="text-7xl animate-fade-in-out drop-shadow-lg">
         {icons[recentlyChangedTheme]}
       </div>
